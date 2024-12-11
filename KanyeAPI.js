@@ -3,6 +3,11 @@ const app = express()
 
 const axios = require('axios');
 
+
+app.get('/', (req, res) => {
+    res.status(200).send('This is index page.');
+ });
+ 
 app.get('/kanye', async (req, res) => {
    try {
        const url = 'https://api.kanye.rest/'; 
